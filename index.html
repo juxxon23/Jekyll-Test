@@ -1,0 +1,29 @@
+---
+user: grim
+show: true
+title: Home
+count: 1
+---
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+  </head>
+  <body>
+  	  <!-- ### Front matter: variables on the top, are available under the #page# variable -->
+  	  <!-- ### Liquid: Template Language -->
+  	  <!-- Objects: variables -->
+  	  <!-- Tags: logic and control flow -->
+  	  <!-- Filters: change output objects -->
+  	  {% if page.show %}
+  	  	<h1>Hello {{ page.user | capitalize }}!</h1> 
+  	  	<h1>Hello {{ page.user | downcase }}!</h1>
+  	  	<h1>Count: {{ page.count }}</h1>
+  	  {% endif %}
+  	  {% if jekyll.environment == "production" %}
+  	  	<h1>PRODUCTION ENVIRONMENT</h1>
+  	  <!--<script src="my-analytics-script.js"></script>-->
+  	  {% endif %}
+  </body>
+</html>
