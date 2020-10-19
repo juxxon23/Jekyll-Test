@@ -18,11 +18,8 @@ defaults:
     values:
       layout: "default"
 
-
-baseurl: /test
+baseurl: /Jekyll-Test
 url: "juxxon23.github.io"
-
-
 
 plugins:
   - jekyll-feed
